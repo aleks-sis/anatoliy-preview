@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОГЭ/ЕГЭ по информатике на 85+ | Репетитор Анатолий</title>
+    <meta name="description" content="Подготовка к ОГЭ/ЕГЭ по информатике с гарантией результата 85+. Авторская методика с ИИ, Python с нуля. Опыт 10+ лет. Запишитесь на пробный урок!">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+        
+        /* Ensure text is dark by default */
+        p, h1, h2, h3, h4, h5, h6, li, span, div {
+            color: #333;
+        }
+
+        /* Ensure all text is visible */
+        p, h1, h2, h3, h4, h5, h6, span, div, label, li {
+            color: inherit;
+        }
+
+        /* Force text color for main content sections */
+        .section p,
+        .section h1,
+        .section h2,
+        .section h3,
+        .section li,
+        .section span:not(.feature-icon) {
+            color: #333 !important;
+        }
+
+        /* Specific overrides for colored backgrounds */
+        .features p,
+        .features h2,
+        .features h3,
+        .contact-section p,
+        .contact-section h2,
+        .contact-section label,
+        .review-card p,
+        .review-card div {
+            color: white !important;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header with animated gradient */
+        .header {
+            background: linear-gradient(-45deg, #4facfe, #00f2fe, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated gradient background */
+        @keyframes gradientShift {
+            0% { 
+                background-position: 0% 50%; 
+            }
+            50% { 
+                background-position: 100% 50%; 
+            }
+            100% { 
+                background-position: 0% 50%; 
+            }
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .header-subtitle {
+            font-size: clamp(18px, 3vw, 24px);
+            margin-bottom: 20px;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .header-highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 40px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: clamp(20px, 4vw, 28px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            animation: fadeIn 0.8s ease 0.4s both;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(238, 90, 82, 0.4);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(238, 90, 82, 0.6);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            position: relative;
+            color: #333;
+        }
+
+        .section:nth-child(even):not(.features):not(.contact-section) {
+            background: white;
+        }
+
+        /* About Section - Fix white text issue */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+            color: #333;
+        }
+        
+        .about-text * {
+            color: #333 !important;
+        }
+
+        .tutor-photo {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        
+        .tutor-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            color: #2d3748;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border-radius: 2px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white;
+            position: relative;
+        }
+
+        .features * {
+            color: white !important;
+        }
+        
+        /* Ensure features section has proper background */
+        section.features {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+            color: white;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: #f8f9fa;
+        }
+
+        .reviews-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+
+        .reviews-carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews-wrapper {
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 0 10px; /* Add padding for mobile */
+        }
+
+        .reviews-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 20px;
+            padding: 5px 0; /* Add vertical padding */
+        }
+
+        .review-card {
+            flex: 0 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .review-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Carousel Controls */
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            pointer-events: none;
+        }
+
+        .carousel-arrow {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: all;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .carousel-arrow:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: #4facfe;
+            transform: scale(1.2);
+        }
+
+        /* Mobile specific styles */
+        @media (max-width: 768px) {
+            .reviews-wrapper {
+                padding: 0 5px;
+            }
+            
+            .reviews-container {
+                gap: 10px;
+            }
+            
+            .review-card {
+                width: calc(100vw - 40px);
+                max-width: 350px;
+                flex-shrink: 0;
+            }
+            
+            .carousel-controls {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .review-card {
+                width: calc(33.333% - 14px);
+                max-width: 400px;
+            }
+            
+            @media (max-width: 1024px) {
+                .review-card {
+                    width: calc(50% - 10px);
+                }
+            }
+        }
+
+        /* Price Section */
+        .price-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            text-align: center;
+        }
+
+        .price-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2d3748;
+        }
+
+        .price-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .price-feature {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .price-feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .price-feature h3 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .price-feature p {
+            color: #4a5568;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .price-feature ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .price-feature li {
+            padding: 10px 0;
+            color: #4a5568;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .price-feature li::before {
+            content: '✓';
+            color: #48bb78;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            background: rgba(255,255,255,0.9);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(79,172,254,0.3);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 4px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.4;
+            cursor: pointer;
+        }
+
+        .checkbox-group a {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Contact buttons */
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            flex: 1 1 auto;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .contact-button.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-button.telegram {
+            background: #0088cc;
+            color: white;
+        }
+
+        .contact-button.phone {
+            background: linear-gradient(45deg, #28a745, #dc3545);
+            color: white;
+        }
+
+        .contact-button svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            .contact-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .contact-button {
+                min-width: auto;
+                width: 100%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .tutor-photo {
+                margin: 0 auto 30px;
+            }
+
+            .features-grid,
+            .price-features {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .review-card {
+                padding: 30px 20px;
+            }
+
+            .review-text {
+                font-size: 18px;
+            }
+
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Utility classes */
+        .text-gradient {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Urgency badge */
+        .urgency-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 15px 0;
+            animation: pulse 2s infinite;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+        }
+        
+        /* IMPORTANT: Color overrides for sections with colored backgrounds */
+        .header h1,
+        .header p,
+        .header div {
+            color: white !important;
+        }
+        
+        .features h2,
+        .features h3,
+        .features p,
+        .features .feature-card * {
+            color: white !important;
+        }
+        
+        .contact-section h2,
+        .contact-section p,
+        .contact-section label {
+            color: white !important;
+        }
+        
+        .review-card * {
+            color: white !important;
+        }
+        
+        /* Ensure all other text is dark */
+        .section:not(.features):not(.contact-section) p,
+        .section:not(.features):not(.contact-section) h1,
+        .section:not(.features):not(.contact-section) h2,
+        .section:not(.features):not(.contact-section) h3,
+        .section:not(.features):not(.contact-section) li {
+            color: #333 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>🎓 ОГЭ / ЕГЭ по информатике на 85+</h1>
+                <p class="header-subtitle">без стресса и "сухой теории"</p>
+                <div class="header-highlight">
+                    Программирование с нуля • Реальные навыки • Авторская методика с ИИ и платформой Яндекс.Контест
+                </div>
+                <div class="urgency-badge">⚡ Мест может не хватить — бронируйте заранее!</div>
+                <a href="#contact" class="cta-button">💬 Записаться на пробный урок</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="section">
+            <div class="container">
+                <div class="about-section">
+                    <div class="tutor-photo">
+                        <img src="DSC09648-2 (3) (2).jpg" alt="Анатолий - репетитор по информатике">
+                    </div>
+                    <div class="about-text">
+                        <h2>🧑‍💻 Репетитор, который научит не бояться информатики</h2>
+                        <p><strong>10+ лет опыта.</strong> Курсы, которые прошли сотни учеников, сдающих на 85+</p>
+                        <p>🚀 Обучаю по системе, адаптированной из лучших олимпиадных школ России</p>
+                        <p>Меня зовут Анатолий, мне 29 лет. Я программист с педагогическим образованием. Окончил магистратуру в ДВФУ по направлению Кибербезопасность. Имею опыт разработки сайтов и приложений в IT-сфере.</p>
+                        <p>Веду преподавательскую деятельность со школьниками и студентами более 8 лет. За это время разработал собственную методику, которая помогает детям полюбить программирование и достигать высоких результатов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section features" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <h2 style="color: white;">Почему мои ученики добиваются результата</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🎮</span>
+                        <h3>Обучение как игра</h3>
+                        <p>Решая задания по программированию, дети как будто проходят квест. Это вызывает неутомимый интерес к изучению предмета и ускоряет процесс обучения в несколько раз.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🧠</span>
+                        <h3>Технологии ИИ</h3>
+                        <p>Применяю современные технологии Искусственного Интеллекта, что ускоряет процесс обучения и делает его более эффективным.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">💪</span>
+                        <h3>Стрессоустойчивость</h3>
+                        <p>Вырабатываю у учеников устойчивость к стрессу при решении тяжелых задач. Это помогает не только на экзамене, но и в жизни.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">👶</span>
+                        <h3>С 4 класса</h3>
+                        <p>Учащиеся 4-7 классов спокойно изучают программирование и решают задания повышенной сложности экзамена за 9 класс.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h3>Без страхов</h3>
+                        <p>Главная задача — избавление от ненужных страхов и ложных установок. Создаю атмосферу, где ошибаться — нормально.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📱</span>
+                        <h3>Онлайн с любого устройства</h3>
+                        <p>Занятия проходят онлайн. Можно заниматься даже с телефона или планшета. Использую специальные инструменты Яндекса.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="section reviews-section">
+            <div class="container">
+                <h2>Отзывы учеников и родителей</h2>
+                <div class="reviews-carousel">
+                    <div class="reviews-wrapper">
+                        <div class="reviews-container" id="reviewsContainer">
+                            <div class="review-card">
+                                <img src="review1.jpg" alt="Отзыв от родителя ученика">
+                            </div>
+                            <div class="review-card">
+                                <img src="review2.jpg" alt="Отзыв от ученика">
+                            </div>
+                            <div class="review-card">
+                                <img src="review3.jpg" alt="Отзыв от родителя">
+                            </div>
+                            <div class="review-card">
+                                <img src="review5.jpg" alt="Отзыв о методике преподавания">
+                            </div>
+                            <div class="review-card">
+                                <img src="review6.jpg" alt="Отзыв о результатах обучения">
+                            </div>
+                            <div class="review-card">
+                                <img src="review7.jpg" alt="Отзыв от ученика">
+                            </div>
+                            <div class="review-card">
+                                <img src="review8.jpg" alt="Отзыв от родителя">
+                            </div>
+                            <div class="review-card">
+                                <img src="review9.jpg" alt="Отзыв о методике">
+                            </div>
+                            <div class="review-card">
+                                <img src="review10.jpg" alt="Отзыв об успехах">
+                            </div>
+                            <div class="review-card">
+                                <img src="review11.jpg" alt="Отзыв о преподавателе">
+                            </div>
+                            <div class="review-card">
+                                <img src="review12.jpg" alt="Отзыв о результатах ЕГЭ">
+                            </div>
+                            <div class="review-card">
+                                <img src="review13.jpg" alt="Отзыв от выпускника">
+                            </div>
+                            <div class="review-card">
+                                <img src="review14.jpg" alt="Отзыв о занятиях">
+                            </div>
+                            <div class="review-card">
+                                <img src="review15.jpg" alt="Отзыв о подготовке к экзаменам">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <div class="carousel-arrow" id="prevButton">‹</div>
+                        <div class="carousel-arrow" id="nextButton">›</div>
+                    </div>
+                </div>
+                <div class="carousel-nav" id="carouselNav"></div>
+            </div>
+        </section>
+
+        <!-- Price Section -->
+        <section class="section price-section">
+            <div class="container">
+                <h2>🧩 Почему мои занятия стоят 3500₽ в час?</h2>
+                <p style="font-size: 20px; margin-bottom: 30px; color: #4a5568;">
+                    Потому что это не просто уроки — это <strong>системное и ускоренное обучение</strong>, основанное на современных методах.
+                </p>
+                
+                <div class="price-features">
+                    <div class="price-feature">
+                        <h3>💻 Яндекс.Контест</h3>
+                        <p>Платформа для проверки решений, используемая ведущими вузами.</p>
+                        <ul>
+                            <li>Автоматическая проверка</li>
+                            <li>Развитие алгоритмического мышления</li>
+                            <li>Эффект вовлечения через геймификацию</li>
+                        </ul>
+                    </div>
+                    <div class="price-feature">
+                        <h3>📘 Stepik</h3>
+                        <p>Интерактивные модули и закрепление знаний.</p>
+                        <ul>
+                            <li>Видео, тесты, практика</li>
+                            <li>Поддержка между занятиями</li>
+                            <li>Авторские курсы под уровень ученика</li>
+                        </ul>
+                    </div>
+                    <div class="price-feature">
+                        <h3>🧠 Психологическая методика</h3>
+                        <p>Комплексное развитие навыков и уверенности.</p>
+                        <ul>
+                            <li>Снятие страха перед программированием</li>
+                            <li>Повышение стрессоустойчивости</li>
+                            <li>Формирование интереса к предмету</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <h2>Записаться на пробный урок</h2>
+                <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">
+                    Оставьте заявку — и я свяжусь с вами лично, чтобы подобрать удобное время
+                </p>
+                
+                <p style="margin-bottom: 20px;">Демонстрационная форма. Отправка заявок пока не подключена</p>
+                <form class="contact-form" id="trial-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя *</label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (xxx) xxx-xx-xx">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grade">Класс ученика</label>
+                        <input type="text" id="grade" name="grade" placeholder="Например: 9 класс">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="goal">Цель обучения</label>
+                        <textarea id="goal" name="goal" rows="3" placeholder="ОГЭ, ЕГЭ, изучение Python с нуля, олимпиады..."></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="privacy" required>
+                        <label for="consent">Согласен с <a href="#" onclick="showPrivacyPolicy(); return false;">обработкой персональных данных</a> *</label>
+                    </div>
+                    
+                    <button type="submit" id="submit-button" class="cta-button" style="width: 100%; margin-top: 20px; font-size: 18px;">
+                        Проверить форму
+                    </button>
+                    <p id="form-feedback" role="status" aria-live="polite" style="margin-top: 20px;"></p>
+                </form>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/79148554356" class="contact-button whatsapp" target="_blank">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="https://t.me/Anatolio33" class="contact-button telegram" target="_blank">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                        Telegram
+                    </a>
+                    <a href="tel:+79148554356" class="contact-button phone">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                        </svg>
+                        Позвонить
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Reviews Carousel
+        let currentReview = 0;
+        const totalReviews = document.querySelectorAll('#reviewsContainer .review-card').length;
+        let autoRotateInterval;
+        let isPaused = false;
+
+        function updateCarousel() {
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            const reviewCards = document.querySelectorAll('.review-card');
+            const containerWidth = reviewsContainer.clientWidth;
+            
+            if (reviewCards.length === 0) return;
+            
+            currentReview = ((currentReview % reviewCards.length) + reviewCards.length) % reviewCards.length;
+            const currentCard = reviewCards[currentReview];
+            const cardPosition = currentCard.offsetLeft - reviewCards[0].offsetLeft;
+            const offset = cardPosition - (containerWidth - currentCard.offsetWidth) / 2;
+            const maxOffset = Math.max(0, reviewsContainer.scrollWidth - containerWidth);
+            const finalOffset = Math.min(maxOffset, Math.max(0, offset));
+            
+            reviewsContainer.style.transform = `translateX(-${finalOffset}px)`;
+            updateDots();
+        }
+
+        function showReview(index) {
+            currentReview = index;
+            if (currentReview >= totalReviews) currentReview = 0;
+            if (currentReview < 0) currentReview = totalReviews - 1;
+            updateCarousel();
+        }
+
+        function nextReview() {
+            currentReview = (currentReview + 1) % totalReviews;
+            updateCarousel();
+        }
+
+        function prevReview() {
+            currentReview = currentReview - 1 < 0 ? totalReviews - 1 : currentReview - 1;
+            updateCarousel();
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.nav-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentReview);
+            });
+        }
+
+        function createDots() {
+            const nav = document.getElementById('carouselNav');
+            nav.innerHTML = '';
+            
+            // Match navigation to the cards present in the page
+            for (let i = 0; i < totalReviews; i++) {
+                const dot = document.createElement('div');
+                dot.className = `nav-dot ${i === 0 ? 'active' : ''}`;
+                dot.onclick = () => {
+                    showReview(i);
+                    restartAutoRotate();
+                };
+                nav.appendChild(dot);
+            }
+        }
+
+        // Auto-rotate reviews every 5 seconds
+        function startAutoRotate() {
+            if (!isPaused) {
+                autoRotateInterval = setInterval(() => {
+                    if (!isPaused) {
+                        nextReview();
+                    }
+                }, 5000); // 5 seconds
+            }
+        }
+
+        function stopAutoRotate() {
+            clearInterval(autoRotateInterval);
+        }
+
+        function pauseAutoRotate() {
+            isPaused = true;
+        }
+
+        function resumeAutoRotate() {
+            isPaused = false;
+        }
+
+        function restartAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+
+        // Touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let isTouching = false;
+        let touchTimeout;
+
+        function setupTouchEvents() {
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            let touchTimer;
+            
+            // Touch start - pause on touch and hold
+            reviewsContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                isTouching = true;
+                
+                // Start timer for touch hold (500ms)
+                touchTimer = setTimeout(() => {
+                    pauseAutoRotate();
+                }, 500);
+                
+                // Clear any existing timeout
+                clearTimeout(touchTimeout);
+            }, { passive: true });
+
+            reviewsContainer.addEventListener('touchmove', (e) => {
+                if (!isTouching) return;
+                touchEndX = e.changedTouches[0].screenX;
+                
+                // Cancel hold timer if moving
+                clearTimeout(touchTimer);
+            }, { passive: true });
+
+            reviewsContainer.addEventListener('touchend', (e) => {
+                if (!isTouching) return;
+                touchEndX = e.changedTouches[0].screenX;
+                
+                // Cancel hold timer
+                clearTimeout(touchTimer);
+                
+                handleSwipe();
+                isTouching = false;
+                
+                // Resume auto-rotate after 3 seconds only if not manually paused
+                if (!isPaused) {
+                    touchTimeout = setTimeout(() => {
+                        resumeAutoRotate();
+                    }, 3000);
+                }
+            }, { passive: true });
+        }
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextReview();
+                } else {
+                    prevReview();
+                }
+            }
+        }
+
+        // Mouse hover support for desktop
+        function setupMouseEvents() {
+            const reviewsCarousel = document.querySelector('.reviews-carousel');
+            const reviewCards = document.querySelectorAll('.review-card');
+            
+            // Pause on carousel hover
+            reviewsCarousel.addEventListener('mouseenter', () => {
+                pauseAutoRotate();
+            });
+            
+            reviewsCarousel.addEventListener('mouseleave', () => {
+                resumeAutoRotate();
+            });
+            
+            // Additional hover events for individual review cards
+            reviewCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    pauseAutoRotate();
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    // Small delay before resuming to prevent rapid on/off
+                    setTimeout(() => {
+                        if (!reviewsCarousel.matches(':hover')) {
+                            resumeAutoRotate();
+                        }
+                    }, 100);
+                });
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for images to load
+            setTimeout(() => {
+                createDots();
+                updateCarousel();
+                setupTouchEvents();
+                setupMouseEvents();
+                startAutoRotate();
+            }, 100);
+            
+            // Setup arrow controls
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    prevReview();
+                    restartAutoRotate();
+                });
+            }
+            
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    nextReview();
+                    restartAutoRotate();
+                });
+            }
+
+            // Handle resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    updateCarousel();
+                }, 250);
+            });
+        });
+
+        // Preview-only validation: no application is sent
+        const trialForm = document.getElementById('trial-form');
+        const phoneInput = document.getElementById('phone');
+        const formFeedback = document.getElementById('form-feedback');
+
+        function validatePhone() {
+            const value = phoneInput.value.trim();
+            const digits = value.replace(/\D/g, '').length;
+            const allowedCharacters = /^\+?[0-9 ()-]+$/.test(value);
+            phoneInput.setCustomValidity(!value
+                ? 'Введите номер телефона.'
+                : (!allowedCharacters || digits < 10 || digits > 15)
+                    ? 'Введите телефон: от 10 до 15 цифр. Допустимы + в начале, пробелы, скобки и дефисы.'
+                    : '');
+        }
+
+        phoneInput.addEventListener('input', validatePhone);
+        validatePhone();
+        trialForm.addEventListener('input', () => {
+            formFeedback.textContent = phoneInput.value.trim() && !phoneInput.validity.valid
+                ? phoneInput.validationMessage
+                : '';
+        });
+        trialForm.addEventListener('invalid', () => {
+            formFeedback.textContent = 'Проверьте обязательные поля и формат телефона.';
+        }, true);
+        trialForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            validatePhone();
+            if (!this.reportValidity()) {
+                formFeedback.textContent = 'Проверьте обязательные поля и формат телефона.';
+                return;
+            }
+            formFeedback.textContent = 'Данные проверены. Заявка не отправлена: отправка пока не подключена.';
+        });
+
+        // Privacy Policy Modal
+        function showPrivacyPolicy() {
+            const modal = document.createElement('div');
+            modal.className = 'privacy-modal';
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                padding: 20px;
+            `;
+            
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: white;
+                padding: 30px;
+                border-radius: 20px;
+                max-width: 600px;
+                max-height: 80vh;
+                overflow-y: auto;
+                position: relative;
+                color: #333;
+            `;
+            
+            content.innerHTML = `
+                <button onclick="this.closest('.privacy-modal').remove()" style="
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    background: none;
+                    border: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                    color: #666;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: all 0.2s ease;
+                " onmouseover="this.style.background='#f1f1f1'" onmouseout="this.style.background='none'">×</button>
+                
+                <h3 style="margin-bottom: 20px; color: #2d3748; font-size: 24px;">Политика конфиденциальности</h3>
+                
+                <div style="line-height: 1.6; color: #4a5568;">
+                    <p style="margin-bottom: 15px;">
+                        <strong>1. Общие положения</strong><br>
+                        Ваши персональные данные используются исключительно для связи с вами по вопросам обучения.
+                    </p>
+                    
+                    <p style="margin-bottom: 15px;">
+                        <strong>2. Сбор информации</strong><br>
+                        Мы собираем только необходимую информацию: имя, телефон, класс ученика и цели обучения.
+                    </p>
+                    
+                    <p style="margin-bottom: 15px;">
+                        <strong>3. Использование данных</strong><br>
+                        Данные используются для:<br>
+                        • Связи с вами для записи на занятия<br>
+                        • Подготовки индивидуальной программы обучения<br>
+                        • Информирования о расписании занятий
+                    </p>
+                    
+                    <p style="margin-bottom: 15px;">
+                        <strong>4. Защита данных</strong><br>
+                        Данные не передаются третьим лицам и хранятся в соответствии с требованиями законодательства РФ.
+                    </p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 25px;">
+                    <button onclick="this.closest('.privacy-modal').remove()" style="
+                        background: linear-gradient(45deg, #4facfe, #00f2fe);
+                        color: white;
+                        border: none;
+                        padding: 12px 30px;
+                        border-radius: 25px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        Понятно
+                    </button>
+                </div>
+            `;
+            
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+            
+            // Close on outside click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        // Smooth scroll effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.8s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

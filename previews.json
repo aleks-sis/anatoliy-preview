@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "title": "Предпросмотр сайта Анатолия",
+  "public": true,
+  "previews": [
+    {
+      "title": "Исправления ALE-28",
+      "sourceCommit": "a6c29357aab253ff6e257a337e6570edb31e544d",
+      "path": "snapshots/a6c29357aab253ff6e257a337e6570edb31e544d/",
+      "manifest": "snapshots/a6c29357aab253ff6e257a337e6570edb31e544d/snapshot.json",
+      "demoForm": true
+    }
+  ]
+}
