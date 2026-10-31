@@ -2,13 +2,25 @@
   "schemaVersion": 1,
   "title": "Предпросмотр сайта Анатолия",
   "public": true,
+  "notice": "Публичные исторические предпросмотры. Реальные заявки обе версии не отправляют. Основной сайт и домен не опубликованы; сведения и контакты требуют подтверждения.",
   "previews": [
     {
-      "title": "Исправления ALE-28",
+      "title": "До правок",
+      "sourceCommit": "d17e8e118db99dae3afdbf6e29adc9e65d967280",
+      "path": "snapshots/d17e8e118db99dae3afdbf6e29adc9e65d967280/",
+      "manifest": "snapshots/d17e8e118db99dae3afdbf6e29adc9e65d967280/snapshot.json",
+      "htmlSha256": "A5715AA546A20B73010792CEABB35C32A8FB4A5E6F5E29038128B59F89ADA991",
+      "historical": true,
+      "formNotice": "Исходная форма изображала успешную отправку; заявки не доставлялись."
+    },
+    {
+      "title": "После исправлений ALE-28",
       "sourceCommit": "a6c29357aab253ff6e257a337e6570edb31e544d",
       "path": "snapshots/a6c29357aab253ff6e257a337e6570edb31e544d/",
       "manifest": "snapshots/a6c29357aab253ff6e257a337e6570edb31e544d/snapshot.json",
-      "demoForm": true
+      "htmlSha256": "A22894DB905329B311C1124376F1001746BC44F87FB9DD854F93632D998B6383",
+      "demoForm": true,
+      "formNotice": "Форма честно помечена демонстрационной; заявки не отправляются."
     }
   ]
 }

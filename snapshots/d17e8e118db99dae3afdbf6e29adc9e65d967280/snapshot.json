@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "title": "До правок",
+  "source": {
+    "repository": "aleks-sis/sites",
+    "commit": "d17e8e118db99dae3afdbf6e29adc9e65d967280",
+    "directory": "repetitor-anatoliy",
+    "visibility": "private"
+  },
+  "snapshotPath": "snapshots/d17e8e118db99dae3afdbf6e29adc9e65d967280/",
+  "historical": true,
+  "formNotice": "В исходной форме был ложный успех. Реальные заявки не отправляются.",
+  "files": [
+    {
+      "path": "DSC09648-2 (3) (2).jpg",
+      "size": 5825426,
+      "sha256": "3485F14E0B5CFE6E0AFADF96FC85246C889B6CFEE440869022C872AF12237CD0",
+      "git_blob_sha": "4a5ccf4dbea10bf5f0f82ac96f6c78b903b34ea1"
+    },
+    {
+      "path": "index.html",
+      "size": 52823,
+      "sha256": "A5715AA546A20B73010792CEABB35C32A8FB4A5E6F5E29038128B59F89ADA991",
+      "git_blob_sha": "66afeb071769e6fb7401748589b55585b5797bdc"
+    },
+    {
+      "path": "review1.jpg",
+      "size": 180793,
+      "sha256": "978CD02C401E7E213CD90D49A82524913F653D423DD9B151266C4DA64159C6B1",
+      "git_blob_sha": "6a64c030f79918a5901720585f44bd4710dcd513"
+    },
+    {
+      "path": "review10.jpg",
+      "size": 61229,
+      "sha256": "E9F672DCF922BF35F89A6FDE46046AD6E589B61B3FDBF12BD14607B4DDA22E7C",
+      "git_blob_sha": "e7b7fa34ff66dbc0eb259489497b6ad7610216cb"
+    },
+    {
+      "path": "review11.jpg",
+      "size": 70016,
+      "sha256": "1ED2B4B9035E19A802CA9816244B547BA2FF015922C966A5D8116CB597193256",
+      "git_blob_sha": "69df7f423eebec43d44785ae3c2fb37a8a57db9e"
+    },
+    {
+      "path": "review12.jpg",
+      "size": 80478,
+      "sha256": "1CC60000A3C7F3E7A7F5E55DF187E0EB52DD5A9FE45B86D8142E117EE69B9BEA",
+      "git_blob_sha": "d6bdc7b971536884aae2e1a00d5a84998afd469b"
+    },
+    {
+      "path": "review13.jpg",
+      "size": 56290,
+      "sha256": "D8E7AA3963F28A4D49F8288899AB059922C7C4EC1D0B4DF7889D110E06F9C54E",
+      "git_blob_sha": "ad89e1fc3b244f1507131ef41dd29a444190fe64"
+    },
+    {
+      "path": "review14.jpg",
+      "size": 91972,
+      "sha256": "BC8A7E86C4AB0C90CDB45FD7FD625C010D001B75A713906F0CFF9BA38C237EAE",
+      "git_blob_sha": "4029814823c11b303eb8d7351a0b64f22e40e835"
+    },
+    {
+      "path": "review15.jpg",
+      "size": 72811,
+      "sha256": "6F14D489C31C1852A1B154B0801F07F6C3CD9FE605EFF0B020F3275A9695FDAE",
+      "git_blob_sha": "b4ad0f008028a2b12b11ef4da42479dd89f28664"
+    },
+    {
+      "path": "review2.jpg",
+      "size": 186516,
+      "sha256": "C12D0C4FDE92E8C672808B9272A46F519EFC47593B7776BE2A09DDF43843C499",
+      "git_blob_sha": "f584260f143af92ba9c97b67e6d5b90d96a05079"
+    },
+    {
+      "path": "review3.jpg",
+      "size": 108196,
+      "sha256": "6A16B0C2385BD59A990959A682EC1ED410A93118AA132BB835517DCEC929E8A5",
+      "git_blob_sha": "2f7fa9567ae709bd402058b09fb828ce32bf5517"
+    },
+    {
+      "path": "review4.jpg",
+      "size": 267874,
+      "sha256": "A3CAF162915C2E8F16B4CDDE2D1739F07DC2BB1DFC91849F2113FB872EC5322A",
+      "git_blob_sha": "b773eb3d514aecbd4b11e1429a0a7ddc2f3a69e6"
+    },
+    {
+      "path": "review5.jpg",
+      "size": 601627,
+      "sha256": "6819FA1E8D98D25346BB78E6D47FC441DFFB3A4E5665DFD98D0248C88FE0C248",
+      "git_blob_sha": "0d01f546feac7eaeda0c22dda01094076315a7cc"
+    },
+    {
+      "path": "review6.jpg",
+      "size": 230048,
+      "sha256": "D3CD53E428FA7A44343E5A7D147A6CA0F671DA2EE28E854D072938B58FCD1147",
+      "git_blob_sha": "b2f0008bceadfac7d72f7868a03e37d3d4069b80"
+    },
+    {
+      "path": "review7.jpg",
+      "size": 127082,
+      "sha256": "730A25E14908FA2CE9455B81E38C473B450ADFD7F3081131B6D307CED3BDBBCB",
+      "git_blob_sha": "3569b916ef416a201aaafc67c640631316ac7067"
+    },
+    {
+      "path": "review8.jpg",
+      "size": 123904,
+      "sha256": "CF8FEDE1A8EA07C047A2AD8EA98AA2075BD5D11908F3F0645A64E4EAD7C4D195",
+      "git_blob_sha": "bcc957519ef872ab060f9391dfaf9e74ed622f7c"
+    },
+    {
+      "path": "review9.jpg",
+      "size": 121661,
+      "sha256": "CDDAD88ADB78E3A935EFB27BACE26C545B1A9914FD10669A261BE6A3CE1817A1",
+      "git_blob_sha": "28001ebcc851a9dc3cd7c71eb4ae6f0609cc3ff2"
+    }
+  ]
+}
